@@ -1,5 +1,8 @@
-﻿using System;
+﻿using DubbeManus.Migrations;
+using DubbeManus.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -16,6 +19,9 @@ namespace DubbeManus
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<NordubbContext, Configuration>());
+            //Database.SetInitializer<NordubbContext>(null);
         }
     }
 }

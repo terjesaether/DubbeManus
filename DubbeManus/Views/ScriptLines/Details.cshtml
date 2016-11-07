@@ -1,0 +1,58 @@
+﻿@model DubbeManus.Models.ScriptLine
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ScriptLine</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SeriesId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeriesId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EpisodeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EpisodeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CharacterId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CharacterId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScriptLineText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScriptLineText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeCode)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ScriptLineId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

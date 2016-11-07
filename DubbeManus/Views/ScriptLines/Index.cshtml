@@ -1,0 +1,74 @@
+﻿@model DubbeManus.Models.EditScriptViewModels
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@Model.Series.OrigName - @Model.Episode.OrigName</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Series.OrigName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Series.LocalName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Characters)
+        </th>
+        <th>
+            
+        </th>
+        <th>
+           
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var scriptline in Model.ScriptLinesMVC) {
+    <tr>
+        <td>
+            @*@using (Html.BeginForm("Index", "Home"))
+            {
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Characters, "Serie:", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("CharacterList", null, "Velg noe ...", htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Characters, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            }*@
+        </td>
+        <td>
+            @scriptline.ScriptLineText
+        </td>
+        <td>
+            @Html.DropDownList("scriptline.CharacterId", scriptline.CharactersSelectList, null, htmlAttributes: new { @class = "form-control character-ddl" })
+            @scriptline.Character.LocalName
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id= scriptline.ScriptLineId }) |
+            @Html.ActionLink("Details", "Details", new { id= scriptline.ScriptLineId }) |
+            @Html.ActionLink("Delete", "Delete", new { id= scriptline.ScriptLineId })
+        </td>
+    </tr>
+}
+
+</table>
+
+@section scripts {
+    <script>
+        $('.character-ddl').selected()
+    </script>
+    
+    }

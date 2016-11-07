@@ -170,12 +170,90 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ScriptLinesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610271733202_AddedTweaks.cs" />
+    <Compile Include="Migrations\201610271733202_AddedTweaks.Designer.cs">
+      <DependentUpon>201610271733202_AddedTweaks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610271756363_AddedTimeCode.cs" />
+    <Compile Include="Migrations\201610271756363_AddedTimeCode.Designer.cs">
+      <DependentUpon>201610271756363_AddedTimeCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610271802310_AddedSummaryAndCommentToCharacter.cs" />
+    <Compile Include="Migrations\201610271802310_AddedSummaryAndCommentToCharacter.Designer.cs">
+      <DependentUpon>201610271802310_AddedSummaryAndCommentToCharacter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610271819515_AddedStuff.cs" />
+    <Compile Include="Migrations\201610271819515_AddedStuff.Designer.cs">
+      <DependentUpon>201610271819515_AddedStuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610271823568_FixedEpisodeId.cs" />
+    <Compile Include="Migrations\201610271823568_FixedEpisodeId.Designer.cs">
+      <DependentUpon>201610271823568_FixedEpisodeId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610271840180_RemovedSeriesIdInCharacter.cs" />
+    <Compile Include="Migrations\201610271840180_RemovedSeriesIdInCharacter.Designer.cs">
+      <DependentUpon>201610271840180_RemovedSeriesIdInCharacter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610271909018_FixedStuffAgain.cs" />
+    <Compile Include="Migrations\201610271909018_FixedStuffAgain.Designer.cs">
+      <DependentUpon>201610271909018_FixedStuffAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610271945267_FixedStuffAgainAgain.cs" />
+    <Compile Include="Migrations\201610271945267_FixedStuffAgainAgain.Designer.cs">
+      <DependentUpon>201610271945267_FixedStuffAgainAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610272028203_AddedSeriesIdTOCharacter.cs" />
+    <Compile Include="Migrations\201610272028203_AddedSeriesIdTOCharacter.Designer.cs">
+      <DependentUpon>201610272028203_AddedSeriesIdTOCharacter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610272103062_AddedCharacterTOScriptLine.cs" />
+    <Compile Include="Migrations\201610272103062_AddedCharacterTOScriptLine.Designer.cs">
+      <DependentUpon>201610272103062_AddedCharacterTOScriptLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610302117154_AddedAllCharactersToScriptLine.cs" />
+    <Compile Include="Migrations\201610302117154_AddedAllCharactersToScriptLine.Designer.cs">
+      <DependentUpon>201610302117154_AddedAllCharactersToScriptLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610302125085_FixedScriptLine.cs" />
+    <Compile Include="Migrations\201610302125085_FixedScriptLine.Designer.cs">
+      <DependentUpon>201610302125085_FixedScriptLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610311530008_ChangedToCommentInSerie.cs" />
+    <Compile Include="Migrations\201610311530008_ChangedToCommentInSerie.Designer.cs">
+      <DependentUpon>201610311530008_ChangedToCommentInSerie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610311545509_Div.cs" />
+    <Compile Include="Migrations\201610311545509_Div.Designer.cs">
+      <DependentUpon>201610311545509_Div.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610311710099_AddedGetSelectlistToScriptLine.cs" />
+    <Compile Include="Migrations\201610311710099_AddedGetSelectlistToScriptLine.Designer.cs">
+      <DependentUpon>201610311710099_AddedGetSelectlistToScriptLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610311719055_EmptyContstr.cs" />
+    <Compile Include="Migrations\201610311719055_EmptyContstr.Designer.cs">
+      <DependentUpon>201610311719055_EmptyContstr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610311752257_Fix2.cs" />
+    <Compile Include="Migrations\201610311752257_Fix2.Designer.cs">
+      <DependentUpon>201610311752257_Fix2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Actor.cs" />
+    <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\EditScriptViewModels.cs" />
+    <Compile Include="Models\Episode.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\IScriptLine.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NordubbContext.cs" />
+    <Compile Include="Models\ScriptLine.cs" />
+    <Compile Include="Models\Series.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -234,6 +312,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ScriptLines\Create.cshtml" />
+    <Content Include="Views\ScriptLines\Delete.cshtml" />
+    <Content Include="Views\ScriptLines\Details.cshtml" />
+    <Content Include="Views\ScriptLines\Edit.cshtml" />
+    <Content Include="Views\ScriptLines\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,6 +328,59 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201610271733202_AddedTweaks.resx">
+      <DependentUpon>201610271733202_AddedTweaks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610271756363_AddedTimeCode.resx">
+      <DependentUpon>201610271756363_AddedTimeCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610271802310_AddedSummaryAndCommentToCharacter.resx">
+      <DependentUpon>201610271802310_AddedSummaryAndCommentToCharacter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610271819515_AddedStuff.resx">
+      <DependentUpon>201610271819515_AddedStuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610271823568_FixedEpisodeId.resx">
+      <DependentUpon>201610271823568_FixedEpisodeId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610271840180_RemovedSeriesIdInCharacter.resx">
+      <DependentUpon>201610271840180_RemovedSeriesIdInCharacter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610271909018_FixedStuffAgain.resx">
+      <DependentUpon>201610271909018_FixedStuffAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610271945267_FixedStuffAgainAgain.resx">
+      <DependentUpon>201610271945267_FixedStuffAgainAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610272028203_AddedSeriesIdTOCharacter.resx">
+      <DependentUpon>201610272028203_AddedSeriesIdTOCharacter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610272103062_AddedCharacterTOScriptLine.resx">
+      <DependentUpon>201610272103062_AddedCharacterTOScriptLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610302117154_AddedAllCharactersToScriptLine.resx">
+      <DependentUpon>201610302117154_AddedAllCharactersToScriptLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610302125085_FixedScriptLine.resx">
+      <DependentUpon>201610302125085_FixedScriptLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610311530008_ChangedToCommentInSerie.resx">
+      <DependentUpon>201610311530008_ChangedToCommentInSerie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610311545509_Div.resx">
+      <DependentUpon>201610311545509_Div.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610311710099_AddedGetSelectlistToScriptLine.resx">
+      <DependentUpon>201610311710099_AddedGetSelectlistToScriptLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610311719055_EmptyContstr.resx">
+      <DependentUpon>201610311719055_EmptyContstr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610311752257_Fix2.resx">
+      <DependentUpon>201610311752257_Fix2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
